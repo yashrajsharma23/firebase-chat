@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/infoRowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rel_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:background="@drawable/call_image_circle"
+                    android:padding="2dp">
+
+                    <com.pkmmte.view.CircularImageView
+                        android:id="@+id/userImg"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@android:color/white"
+                        android:focusable="false"
+                        android:src="@drawable/contact_tab"
+                        app:border="true"
+                        app:border_color="#d6cfcf"
+                        app:border_width="1dp"
+                        app:shadow="false" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/rel_img">
+
+
+                    <TextView
+                        android:id="@+id/nickNameView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:text="12344"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/numberView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nickNameView"
+                        android:lines="1"
+                        android:text="4555"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/contact_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/underline_grey"
+        />
+
+</LinearLayout>
+

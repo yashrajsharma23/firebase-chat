@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="app_header">#204d67</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue500">#ff6FCFDA</color>
+    <color name="off">#11CB5F</color>
+    <color name="on">#2AE278</color>
+    <color name="underline_grey">#ffD8D8D8</color>
+    <color name="black">#000000</color>
+    <color name="text_grey">#919395</color>
+    <color name="tabtextselected">#303F9F</color>
+    <color name="tabtextunselected">#24272C</color>
+    <color name="edittext_border_color">#909294</color>
+    <color name="grey300">#ffe0e0e0</color>
+    <color name="chat_green">#44BD32</color>
+
+    <color name="bgBottomNavigation">#f4f4f4</color>
+
+</resources>

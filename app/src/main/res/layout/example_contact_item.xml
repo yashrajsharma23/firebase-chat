@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contact_indexer_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sectionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:text="A"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <com.daimajia.swipe.SwipeLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/idEditContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:src="@drawable/edit"
+                android:tint="@color/tabtextselected" />
+
+
+            <ImageView
+                android:id="@+id/idFavContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/idEditContact"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:tint="@color/tabtextselected" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoRowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/call_image_circle"
+                    android:padding="2dp">
+
+                    <com.pkmmte.view.CircularImageView
+                        android:id="@+id/userImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:src="@drawable/contact_tab"
+                        app:border="true"
+                        app:border_color="#d6cfcf"
+                        app:border_width="1dp"
+                        app:shadow="false" />
+
+
+                    <com.pkmmte.view.CircularImageView
+                        android:id="@+id/userImg_2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:src="@drawable/contact_tab"
+                        android:visibility="gone"
+                        app:border="true"
+                        app:border_color="#d6cfcf"
+                        app:border_width="1dp"
+                        app:shadow="false" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/rel_img"
+                    android:layout_toLeftOf="@+id/rel_invite"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/nickNameView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_fav"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/numberView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nickNameView"
+                        android:layout_toLeftOf="@+id/img_fav"
+                        android:lines="1"
+                        android:text=""
+                        android:ellipsize="end"
+                        android:textColor="@color/edittext_border_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/img_fav"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp"
+                        android:padding="5dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    >
+
+                    <Button
+                        android:id="@+id/chat_invite"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/curved_invite"
+                        android:text="@string/invite"
+                        android:textColor="@color/tabtextselected"
+                        android:textSize="10dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </com.daimajia.swipe.SwipeLayout>
+
+    <View
+        android:id="@+id/contact_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/underline_grey" />
+
+</LinearLayout>
+
